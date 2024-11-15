@@ -18,7 +18,6 @@ class PhoneScreen extends StatefulWidget {
 }
 
 class _PhoneScreenState extends State<PhoneScreen> {
-
   @override
   void initState() {
     Get.put(SendOTPRepository(mAuth: FirebaseAuth.instance));
@@ -30,7 +29,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
   String countryCode = '';
   bool isButtonEnabled = false;
 
-  // Function to validate phone number input
+  /// Function to validate phone number input
   void _onPhoneNumberChanged(String value, String number) {
     setState(() {
       countryCode = value.trim();
@@ -42,8 +41,9 @@ class _PhoneScreenState extends State<PhoneScreen> {
     });
   }
 
+  /// After OTP success fully send redirect to OTP verify screen.
   void _sendOTP() {
-    Get.find<SendOTPController>().sendOTP((verificationId){
+    Get.find<SendOTPController>().sendOTP((verificationId) {
       Get.toNamed(RouteHelper.verifyOTP, arguments: '$countryCode$phoneNumber');
     });
   }
@@ -69,8 +69,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: SvgPicture.asset(MyImages.icCencel, width: 30, height: 30),
-                    )                  ]),
+                      child: SvgPicture.asset(MyImages.icCencel,
+                          width: 30, height: 30),
+                    )
+                  ]),
                   Center(
                     child: Column(children: [
                       const SizedBox(height: 100),
@@ -119,7 +121,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
             )),
           ],
         ),
-        bottomNavigationBar: Container(
+        bottomNavigationBar: SizedBox(
           height: 154,
           child: SvgPicture.asset(
             MyImages.bgMobile, // Replace with your image path

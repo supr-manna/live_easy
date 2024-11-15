@@ -10,7 +10,6 @@ class SendOTPController extends GetxController {
   RxBool isLoading = false.obs;
   String? _verificationId;
 
-
   Future<void> sendOTP(Function(String) onCodeSent) async{
     await sendOTPRepo.verifyPhoneNumber(phone, (verificationId) {
       _verificationId = verificationId;

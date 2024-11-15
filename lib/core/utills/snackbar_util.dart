@@ -3,16 +3,14 @@ import 'package:get/get.dart';
 import 'package:live_easy/constraint/my_color.dart';
 
 void showCustomSnackBar(String message, {bool isError = false}) {
-  Get.snackbar(
-    '',
-    '',
+  Get.snackbar('', '',
     snackPosition: SnackPosition.BOTTOM,
     backgroundColor: isError ? Colors.red : Colors.green,
     colorText: MyColor.whiteColor,
     margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
     borderRadius: 8.0,
     duration: const Duration(seconds: 3),
-    titleText: const SizedBox(), // Removes the extra space for title
+    titleText: const SizedBox(),
     messageText: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -21,7 +19,7 @@ void showCustomSnackBar(String message, {bool isError = false}) {
           color: MyColor.whiteColor,
           size: 20.0,
         ),
-        const SizedBox(width: 8.0), // Space between icon and text
+        const SizedBox(width: 8.0),
         Expanded(
           child: Text(
             message,

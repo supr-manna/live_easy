@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:live_easy/constraint/my_color.dart';
 import 'package:live_easy/constraint/my_strings.dart';
-import '../../data/controller/send_otp_controller.dart';
 
 class SelectProfile extends StatefulWidget {
   const SelectProfile({super.key});

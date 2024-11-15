@@ -33,36 +33,36 @@ class _CountryCodePickerTextFieldState extends State<CountryCodePickerTextField>
           ),
           labelText: 'Please Enter phoneNumber',
           labelStyle: TextStyle(
-            color: MyColor.grayColor, // Set the label color to gray
+            color: MyColor.grayColor,
           ),
           prefixIcon: GestureDetector(
             onTap: () {
               showCountryPicker(
                 context: context,
-                showPhoneCode: true, // Show phone code
+                showPhoneCode: true,
                 onSelect: (Country country) {
                   setState(() {
                     selectedCountryCode = "+${country.phoneCode}";
-                    selectedFlag = country.flagEmoji; // Get the country flag emoji
+                    selectedFlag = country.flagEmoji;
                   });
                 },
               );
             },
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    selectedFlag, // Display the selected country flag
-                    style: TextStyle(fontSize: 18),
+                    selectedFlag,
+                    style: const TextStyle(fontSize: 18),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
-                    selectedCountryCode, // Display the selected country code
-                    style: TextStyle(fontSize: 16),
+                    selectedCountryCode,
+                    style: const TextStyle(fontSize: 16),
                   ),
-                  Icon(Icons.arrow_drop_down), // Drop-down icon
+                  const Icon(Icons.arrow_drop_down),
                 ],
               ),
             ),

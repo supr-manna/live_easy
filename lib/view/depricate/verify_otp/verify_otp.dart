@@ -62,12 +62,8 @@ class _VerifyOtpState extends State<VerifyOtp> {
                     inputFieldLength: 6,
                     spaceBetweenFields: 10,
 
-                    onValueChange: (String value) {
-                      print("otp changed $value");
-                    },
-                    onCompleted: (String value) {
-                      print("otp  $value");
-                    },),
+                    onValueChange: (String value) {},
+                    onCompleted: (String value) {},),
                   const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -114,7 +110,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
             )
           ])))
         ]),
-        bottomNavigationBar: Container(
+        bottomNavigationBar: SizedBox(
           height: 154,
           child: SvgPicture.asset(
             MyImages.bgMobile, // Replace with your image path

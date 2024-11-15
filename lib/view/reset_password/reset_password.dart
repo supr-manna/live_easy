@@ -5,7 +5,6 @@ import 'package:live_easy/data/controller/reset_password_controller.dart';
 import '../../constraint/my_color.dart';
 import '../../constraint/my_images.dart';
 import '../../constraint/my_strings.dart';
-import '../../data/controller/social_signIn_controller.dart';
 import '../../data/repository/social_signIn_repo.dart';
 
 class ResetPassword extends StatefulWidget {
@@ -147,7 +146,7 @@ class _ResetPasswordState extends State<ResetPassword> {
             )),
           ],
         ),
-        bottomNavigationBar: Container(
+        bottomNavigationBar: SizedBox(
           height: 154,
           child: SvgPicture.asset(
             MyImages.bgMobile,

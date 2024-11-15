@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:live_easy/data/repository/social_signIn_repo.dart';
-
 import '../../core/utills/snackbar_util.dart';
 
 class ResetPasswordController extends GetxController {

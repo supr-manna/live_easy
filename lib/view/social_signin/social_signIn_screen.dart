@@ -135,7 +135,8 @@ class _SocialSignInScreenState extends State<SocialSignInScreen> {
                         return controller.isLoading.value
                             ? const CircularProgressIndicator()
                             : Padding(
-                                padding: const EdgeInsets.only(left: 14.0, right: 14.0),
+                                padding: const EdgeInsets.only(
+                                    left: 14.0, right: 14.0),
                                 child: AnimatedContainer(
                                   duration: const Duration(milliseconds: 300),
                                   curve: Curves.easeInOut,
@@ -184,7 +185,7 @@ class _SocialSignInScreenState extends State<SocialSignInScreen> {
             )),
           ],
         ),
-        bottomNavigationBar: Container(
+        bottomNavigationBar: SizedBox(
           height: 154,
           child: SvgPicture.asset(
             MyImages.bgMobile,
