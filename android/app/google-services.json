@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "907226873496",
+    "project_id": "liveeasy-1f20d",
+    "storage_bucket": "liveeasy-1f20d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907226873496:android:b4a3e99dae25e1779adaed",
+        "android_client_info": {
+          "package_name": "com.supriya.liveEasy.live_easy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbBhLzBtXbC8H0ISEsyrKm4q5T2TF_KD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
